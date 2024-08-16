@@ -1,0 +1,56 @@
+{
+  "invoiceNumber": 12345,
+  "invoiceDate": "2024-08-15T03:00:00.000Z",
+  "issuer": {
+    "companyName": "Tech Innovators Inc.",
+    "taxId": 123456789,
+    "address": {
+      "street": "123 Innovation Drive",
+      "city": "tech city",
+      "state": "CA",
+      "zipCode": "90001",
+      "country": "USA",
+      "default": "default"
+    },
+    "contact": {
+      "email": "contact@techinnovators.com",
+      "phone": "+1-800-555-1234"
+    }
+  },
+  "recipient": {
+    "companyName": "Future Solutions Ltd.",
+    "taxId": "987654321",
+    "address": {
+      "street": "456 Future Road",
+      "city": "Solution City",
+      "state": "NY",
+      "zipCode": "10001",
+      "country": "USA"
+    },
+    "contact": {
+      "email": "info@futuresolutions.com",
+      "phone": "+1-800-555-5678"
+    }
+  },
+  "items": [
+    {
+      "itemCode": "GTIN=TI1001",
+      "description": "high-performance laptop",
+      "quantity": 999,
+      "totalPrice": 3000.0,
+      "category": "computer",
+      "default": "default",
+      "unitPrice": 1500
+    },
+    {
+      "itemCode": "GTIN=TI2002",
+      "description": "wireless mouse",
+      "quantity": 1,
+      "totalPrice": 100,
+      "category": "peripheral",
+      "default": "default",
+      "unitPrice": 20
+    }
+  ],
+  "paymentCodes": [456, "987", 789]
+}

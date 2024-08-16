@@ -1,0 +1,63 @@
+{
+  "type": "object",
+  "maxProperties": 6,
+  "properties": {
+    "invoiceNumber": { "type": "number" },
+    "invoiceDate": { "type": "string", "format": "datetime" },
+    "issuer": {
+      "type": "object",
+      "properties": {
+        "companyName": {
+          "type": "string"
+        },
+        "taxId": { "type": "number" },
+        "address": {
+          "type": "object",
+          "properties": {
+            "street": { "type": "string", "minLength": 10 },
+            "city": { "type": "string", "transform": ["toLowerCase"] },
+            "state": {
+              "type": "string",
+              "transform": ["toUpperCase", "trim"],
+              "maxLength": 2
+            },
+            "zipCode": { "type": "string", "format": "zipCode" },
+            "country": { "type": "string", "default": "USA" },
+            "default": { "type": "string", "default": "default" }
+          }
+        },
+        "contact": {
+          "type": "object",
+          "properties": {
+            "email": null
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "itemCode": { "type": "string", "format": "customCodeFormat" },
+          "description": {
+            "type": "string",
+            "transform": ["trimStart", "toLowerCase"]
+          },
+          "quantity": { "type": "number", "minimum": 1, "maximum": 999 },
+          "category": { "type": "number", "enum": ["computer", "peripheral"] },
+          "totalPrice": {},
+          "default": { "type": "string", "default": "default" }
+        }
+      }
+    },
+    "paymentCodes": {
+      "type": "array",
+      "items": [
+        { "type": "integer" },
+        { "type": "string" },
+        { "type": "integer" }
+      ]
+    }
+  }
+}
