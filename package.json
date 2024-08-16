@@ -1,6 +1,6 @@
 {
   "name": "json-schema-transformer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "files": [
@@ -12,7 +12,11 @@
     "test": "jest --colors",
     "lint": "eslint \"src/**/*.ts\""
   },
-  "keywords": ["json", "schema","formatter"],
+  "keywords": [
+    "json",
+    "schema",
+    "formatter"
+  ],
   "author": "kleverson.cruz",
   "homepage": "https://github.com/KleversonCruz/json-schema-transformer#readme",
   "repository": {
