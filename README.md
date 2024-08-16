@@ -1,17 +1,17 @@
-# schema-json-formatter
+# json-schema-transformer
 
 ## Overview
 
-`schema-json-formatter` is a library for enforcing schema-based transformations and on JSON data. It ensures data consistency by applying type conversions, custom formats, and default values according to the defined schema, making your JSON data compliant and well-structured.
+`json-schema-transformer` is a library for enforcing schema-based transformations and on JSON data. It ensures data consistency by applying type conversions, custom formats, and default values according to the defined schema, making your JSON data compliant and well-structured.
 
 ## Getting Started
 
 ## Installation
 
-To install schema-json-formatter:
+To install json-schema-transformer:
 
 ```sh
-npm install schema-json-formatter
+npm install json-schema-transformer
 ```
 
 ### Basic Usage
