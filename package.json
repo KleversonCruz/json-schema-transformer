@@ -15,6 +15,10 @@
   "keywords": ["json", "schema","formatter"],
   "author": "kleverson.cruz",
   "homepage": "https://github.com/KleversonCruz/json-schema-transformer#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KleversonCruz/json-schema-transformer.git"
+  },
   "engines": {
     "node": ">=16.0.0"
   },
