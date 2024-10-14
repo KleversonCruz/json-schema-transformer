@@ -47,7 +47,13 @@ describe('assignDefaultValues', () => {
       },
     };
 
-    expect(applyDefaults(schema, {})).toEqual({
+    expect(
+      applyDefaults(schema, {
+        user: {
+          name: undefined
+        },
+      })
+    ).toEqual({
       user: {
         name: 'John Doe',
         address: {

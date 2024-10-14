@@ -9,7 +9,7 @@ export default function applyDefaults(schema: Schema, data: any) {
 
         if (!propertySchema) return data;
 
-        if (!hasOwnProp(data, key) || data[key] === '') {
+        if (!hasOwnProp(data, key) || !data[key]) {
           if (propertySchema.default) {
             data[key] = propertySchema.default;
           } else if (propertySchema.type === 'object') {

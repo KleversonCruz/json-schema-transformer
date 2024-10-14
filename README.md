@@ -2,7 +2,7 @@
 
 ## Overview
 
-`json-schema-transformer` is a library for enforcing schema-based transformations and on JSON data. It ensures data consistency by applying type conversions, custom formats, and default values according to the defined schema, making your JSON data compliant and well-structured.
+`json-schema-transformer` is a library for enforcing schema-based transformations on JSON data. It ensures data consistency by applying type conversions, custom formats, and default values according to the defined schema, making your JSON data compliant and well-structured.
 
 ## Getting Started
 
@@ -38,14 +38,15 @@ const data = {
   issuer: { name: 'Tech Innovators' },
 };
 
-const output = {
-  invoiceNumber: 123,
-  invoiceDate: '2024-08-15T03:00:00.000Z',
-  issuer: { name: 'tech innovators', country: 'USA' },
-};
-
 const jsonFormatter = new JsonFormatter();
-jsonFormatter.execute(schema, data); // => output
+const output = jsonFormatter.execute(schema, data);
+console.log(output);
+
+// {
+//   invoiceNumber: 123,
+//   invoiceDate: '2024-08-15T03:00:00.000Z',
+//   issuer: { name: 'tech innovators', country: 'USA' },
+// };
 ```
 
 ### Custom Formats
@@ -64,10 +65,6 @@ const data = {
   code: 'foo',
 };
 
-const output = {
-  code: 'G-FOO',
-};
-
 const formatter = new JsonFormatter();
 
 formatter.addFormat('customFormat', {
@@ -75,5 +72,10 @@ formatter.addFormat('customFormat', {
   format: (value) => `G-${value}`,
 });
 
-jsonFormatter.execute(schema, data); // => output
+const output = jsonFormatter.execute(schema, data);
+console.log(output);
+
+// {
+//   code: 'G-foo',
+// };
 ```
